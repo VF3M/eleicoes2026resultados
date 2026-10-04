@@ -41,8 +41,8 @@ header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 9
 .ti{display:grid;place-items:center}.ti svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 @media (max-width:760px){
   header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--bg)}
-  .tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;margin:0;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(6,1fr);gap:0;max-width:none}
-  .tabs button{flex-direction:column;gap:3px;font-size:10.5px;font-weight:600;padding:6px 0;min-height:54px;border-radius:10px;letter-spacing:.01em}
+  .tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;margin:0;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(7,1fr);gap:0;max-width:none}
+  .tabs button{flex-direction:column;gap:3px;font-size:10px;font-weight:600;padding:6px 0;min-height:54px;border-radius:10px;letter-spacing:.01em}
   .tabs button.on{background:none;color:var(--fg)}
   .tabs button.on .ti{background:var(--chip);border-radius:999px}
   .ti{width:46px;height:28px}.ti svg{width:21px;height:21px}
@@ -209,6 +209,14 @@ footer{font-size:12px;color:var(--mut);text-align:center;padding:24px 16px;max-w
 .apbar{margin-top:10px}.apbar.big{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}.aptxt{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums;margin-bottom:6px}.aptxt b{color:var(--fg);font-weight:700}.apbar.big .aptxt{font-size:15px}.apbar.big .aptxt b{font-size:16px}.apm{font-size:.9em}.aptrack{height:8px;border-radius:5px;background:var(--bar);overflow:hidden}.apbar.big .aptrack{height:14px;border-radius:7px}.apfill{display:block;height:100%;background:#475569;border-radius:inherit;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}@media(prefers-color-scheme:dark){.apfill{background:#94a3b8}}.apends{display:flex;justify-content:space-between;font-size:11px;color:var(--mut);margin-top:3px;font-variant-numeric:tabular-nums}
 .depseg{display:flex;gap:4px;padding:4px;margin:12px 0 4px;background:var(--bg2);border:1px solid var(--line);border-radius:10px}.depseg button{flex:1;font:inherit;font-size:14px;font-weight:600;padding:9px 8px;border:0;border-radius:7px;background:transparent;color:var(--mut);cursor:pointer}.depseg button span{font-weight:500;font-size:12px;opacity:.8}#v-dep[data-sub="fed"] [data-depsub="fed"],#v-dep[data-sub="est"] [data-depsub="est"]{background:var(--bg);color:var(--fg);box-shadow:0 1px 3px rgba(0,0,0,.12)}#v-dep[data-sub="fed"] .depp[data-dp="est"],#v-dep[data-sub="est"] .depp[data-dp="fed"]{display:none}
 .t-par{background:transparent!important;border:1px solid color-mix(in srgb,var(--ok) 55%,transparent);color:var(--ok)}.t-mat{background:#15803d;color:#fff}.selos{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--mut);margin:6px 0 10px}.selos .tag{margin-right:6px}.selos.one{flex-direction:row;flex-wrap:wrap;gap:4px 14px;margin:10px 0 0}
+.hemi{display:block;width:100%;max-width:560px;margin:14px auto 4px}.hemi-n{font-size:.22px;font-weight:750;fill:var(--fg)}
+#v-cong[data-sub="sen"] .cgpane[data-cgp="cam"],#v-cong[data-sub="cam"] .cgpane[data-cgp="sen"]{display:none}
+#v-cong[data-sub="sen"] [data-cgmode="sen"],#v-cong[data-sub="cam"] [data-cgmode="cam"]{background:var(--bg);color:var(--fg);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.cgt{margin-top:10px;border-top:1px solid var(--line)}.cgp{border-bottom:1px solid var(--line)}.cgp>summary{list-style:none;display:flex;align-items:center;gap:8px;padding:10px 2px;cursor:pointer}.cgp>summary::-webkit-details-marker{display:none}
+.cgp .sw,.cgr .sw{width:10px;height:10px;border-radius:3px;flex:none}.cgn{font-weight:650;font-size:14px;min-width:0;flex:0 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:46%}.cgb{flex:1;height:8px;border-radius:4px;background:var(--bar);overflow:hidden;min-width:30px}.cgb i{display:block;height:100%}
+.cgv{font-size:16px;min-width:2ch;text-align:right;font-variant-numeric:tabular-nums}.cgpc{font-size:12px;color:var(--mut);min-width:3.6em;text-align:right;font-variant-numeric:tabular-nums}
+.cgd{padding:0 2px 10px}.cgr{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;padding:5px 0;font-size:13px;border-top:1px dashed var(--line)}.cgr.sub{border-top:0;padding-left:10px;align-items:center}.cgr .vt{margin-left:auto;color:var(--mut);font-size:12px;font-variant-numeric:tabular-nums}.ufc{min-width:2.2em}.nms{color:var(--mut);font-size:12px;flex:1 1 60%;min-width:0}
+.linkbtn{font:inherit;font-size:inherit;background:none;border:0;padding:0;color:var(--link);cursor:pointer;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -217,12 +225,12 @@ footer{font-size:12px;color:var(--mut);text-align:center;padding:24px 16px;max-w
   <div class="hb"><div class="brand"><h1>Apuração 2026 · 1º turno</h1><div class="sub"><span class="live"><i></i>Ao vivo</span><span id="hpct"></span><span id="status">carregando…</span><span id="online" class="onl" hidden><i></i><b>–</b><span class="ol-l"> pessoas online agora</span></span></div></div>
     <button id="refresh" type="button" aria-label="Atualizar agora"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></svg></button></div>
   <div class="rbar"><i id="rbar"></i></div>
-  <nav class="tabs" id="tabs"><button type="button" data-tab="resumo"><span class="ti"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span><span>Resumo</span></button><button type="button" data-tab="mapa"><span class="ti"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Mapa</span></button><button type="button" data-tab="prob"><span class="ti"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span>Chances</span></button><button type="button" data-tab="sc"><span class="ti"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg></span><span>SC</span></button><button type="button" data-tab="dep"><span class="ti"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.6 5 5.8"/></svg></span><span>Deputados</span></button><button type="button" data-tab="imb"><span class="ti"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span>Imbituba</span></button></nav>
+  <nav class="tabs" id="tabs"><button type="button" data-tab="resumo"><span class="ti"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span><span>Resumo</span></button><button type="button" data-tab="mapa"><span class="ti"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg></span><span>Mapa</span></button><button type="button" data-tab="prob"><span class="ti"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span>Chances</span></button><button type="button" data-tab="sc"><span class="ti"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg></span><span>SC</span></button><button type="button" data-tab="dep"><span class="ti"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.2c2.9.3 5 2.6 5 5.8"/></svg></span><span>Deputados</span></button><button type="button" data-tab="cong"><span class="ti"><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20v-8M9.5 20v-8M14.5 20v-8M19 20v-8M3 12h18L12 4z"/></svg></span><span>Congresso</span></button><button type="button" data-tab="imb"><span class="ti"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span>Imbituba</span></button></nav>
 </header>
 <div class="sheet" id="sheet" aria-live="polite"></div>
 <main id="app">
   <div class="view" id="v-resumo"></div><div class="view" id="v-mapa"></div><div class="view" id="v-prob"></div>
-  <div class="view" id="v-sc"></div><div class="view" id="v-dep"></div><div class="view" id="v-imb"></div>
+  <div class="view" id="v-sc"></div><div class="view" id="v-dep"></div><div class="view" id="v-cong"></div><div class="view" id="v-imb"></div>
 </main>
 <footer>Dados oficiais: TSE · resultados.tse.jus.br/oficial · atualização automática a cada 60 s · horários de Brasília · <span id="mode"></span></footer>
 <script>
@@ -759,13 +767,13 @@ function renderResumo(o) {
   h+=miniTop(o.imb, 3, `${MUN.nome} · Presidente`, "imb");
   return h; }
 // ---- Abas, atualização, flash, puxar-para-atualizar ----
-const TABS=["resumo","mapa","prob","sc","dep","imb"];
+const TABS=["resumo","mapa","prob","sc","dep","cong","imb"];
 let DEPSUB="fed"; try { DEPSUB=localStorage.getItem("depsub")==="est"?"est":"fed"; } catch (e) {}
 function setDepSub(x, push) { DEPSUB = x==="est"?"est":"fed"; try { localStorage.setItem("depsub", DEPSUB); } catch (e) {}
   const v=typeof document!=="undefined"&&document.getElementById("v-dep"); if (v) v.dataset.sub=DEPSUB;
   if (push && location.hash.startsWith("#dep")) history.replaceState(null,"","#dep-"+DEPSUB); }
 function setTab(t, push) { t=String(t||""); if (t==="dep-fed"||t==="dep-est") { setDepSub(t.slice(4)); t="dep"; } if (!TABS.includes(t)) t="resumo";
-  setDepSub(DEPSUB);
+  setDepSub(DEPSUB); if (t==="cong") setTimeout(()=>congLoad(), 0);
   document.querySelectorAll(".view").forEach(v=>v.classList.toggle("on", v.id==="v-"+t));
   document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("on", b.dataset.tab===t));
   try { localStorage.setItem("tab", t); } catch (e) {}
@@ -949,6 +957,86 @@ if (typeof document!=="undefined") {
     const card=row.closest("[data-cargo]"); if (!card || !["6","7"].includes(card.dataset.cargo)) return;
     const cur={cargo:+card.dataset.cargo, num:row.dataset.num}; if (!GX.cur || GX.cur.num!==cur.num || GX.cur.cargo!==cur.cargo) { if (!GX.busy) { GX.last=null; GX.prog=""; GX.err=""; } }
     if (!GX.busy) GX.cur=cur; depSheet(); gxCS().then(()=>{ if (GX.cur) depSheet(); }).catch(()=>{}); });
+}
+// ---- Congresso (visão nacional): Senado (54 vagas em disputa) e Câmara (513, projeção proporcional por UF) ----
+const UFS27=["ac","al","am","ap","ba","ce","df","es","go","ma","mg","ms","mt","pa","pb","pe","pi","pr","rj","rn","ro","rr","rs","sc","se","sp","to"];
+const VAGAS_CAM={sp:70,mg:53,rj:46,ba:39,rs:31,pr:30,pe:25,ce:22,ma:18,go:17,pa:17,sc:16,pb:12,es:10,pi:10,al:9,am:8,df:8,ms:8,mt:8,rn:8,ro:8,ac:8,ap:8,rr:8,se:8,to:8};
+const CG={sen:{}, cam:{}, t:0, busy:false, done:0, err:[], mode:"sen", open:new Set()};
+const CG_REFRESH=180000;
+const SPECT=["PSOL","REDE","PCDOB","PT","PV","PSB","PDT","SOLIDARIEDADE","AVANTE","AGIR","PMB","MOBILIZA","PRD","MDB","PSD","CIDADANIA","PSDB","PODE","UNIÃO","PP","REPUBLICANOS","DC","NOVO","PL"];
+const PCOL={PSOL:"#f9a825",REDE:"#7cb342",MDB:"#2e7d32",PSD:"#ef6c00",UNIÃO:"#00897b",PP:"#6a1b9a",REPUBLICANOS:"#5d4037",PSB:"#f4511e",PDT:"#ad1457",NOVO:"#ffa000",PSDB:"#0288d1",PODE:"#8e24aa",CIDADANIA:"#c0ca33",AVANTE:"#00acc1",SOLIDARIEDADE:"#ff7043",PRD:"#546e7a",DC:"#6d4c41"};
+const isPTk = sg => /(^|\/)PT(\/|$)/.test(sg);
+function pColor(sg) { if (isPTk(sg)) return "var(--pt)"; if (sg==="PL") return "var(--pl)"; const f=String(sg).split("/")[0]; if (PCOL[f]) return PCOL[f];
+  let h=0; for (const ch of String(sg)) h=(h*31+ch.charCodeAt(0))%997; return `hsl(${h%360},12%,${45+h%20}%)`; }
+function spectIdx(sg) { const ps=String(sg).split("/"); if (isPTk(sg)) return SPECT.indexOf("PT"); let best=null; for (const p of ps) { const i=SPECT.indexOf(p); if (i>=0) best=best==null?i:Math.min(best,i); } return best==null?12.5:best; }
+function hemi(groups, total) { // groups: [{k, sg, n}] em ordem esquerda→direita
+  if (!total) return "";
+  const R = total<=30?3 : total<=60?4 : total<=150?7 : total<=300?10 : 13, r0=0.38;
+  const radii=Array.from({length:R},(_,i)=>r0+(1-r0)*(R===1?1:i/(R-1))), sR=radii.reduce((a,b)=>a+b,0);
+  const counts=radii.map(r=>Math.floor(total*r/sR)); let left=total-counts.reduce((a,b)=>a+b,0); for (let i=R-1; left>0; i=(i-1+R)%R) { counts[i]++; left--; }
+  const pts=[]; radii.forEach((r,i)=>{ const n=counts[i]; for (let j=0;j<n;j++) { const a=Math.PI*(n===1?0.5:j/(n-1)); pts.push({x:-Math.cos(a)*r, y:-Math.sin(a)*r, a, r}); } });
+  pts.sort((p,q)=>p.a-q.a||q.r-p.r);
+  const dr=Math.min(...radii.map((r,i)=>counts[i]>1?Math.PI*r/(counts[i]-1):1), R>1?(1-r0)/(R-1):1)*0.42;
+  const cols=[]; for (const g of groups) for (let i=0;i<g.n;i++) cols.push(pColor(g.sg)); while (cols.length<total) cols.push("var(--bar)");
+  return `<svg class="hemi" viewBox="-1.06 -1.06 2.12 1.12" role="img" aria-label="Hemiciclo">${pts.map((p,i)=>`<circle cx="${p.x.toFixed(4)}" cy="${p.y.toFixed(4)}" r="${dr.toFixed(4)}" fill="${cols[i]}"/>`).join("")}<text x="0" y="-0.06" text-anchor="middle" class="hemi-n">${total}</text></svg>`; }
+async function congLoad(force) {
+  if (CG.busy) return; if (!force && CG.t && Date.now()-CG.t<CG_REFRESH) { drawCong(); return; }
+  CG.busy=true; CG.done=0; CG.err=[]; drawCong();
+  try { const E=await loadEle().catch(()=>null), eS=(E&&E["Senador"])||"6259", eF=(E&&E["Deputado Federal"])||"6259";
+    const jobs=UFS27.flatMap(u=>[[u,5],[u,6]]), sen={}, cam={};
+    await pool(jobs, 6, async ([u,c])=>{ try { const raw=await getJSON(url(c===5?eS:eF, u, c)); (c===5?sen:cam)[u]=raw; } catch(e) { CG.err.push(u.toUpperCase()+(c===5?" Senado":" Câmara")); if (c===5&&CG.sen[u]) sen[u]=CG.sen[u]; if (c===6&&CG.cam[u]) cam[u]=CG.cam[u]; }
+      CG.done++; const el=document.getElementById("cgprog"); if (el) el.textContent=`Carregando ${CG.done} de ${jobs.length} arquivos do TSE…`; });
+    CG.sen=sen; CG.cam=cam; CG.t=Date.now();
+  } catch(e) { CG.err.push(e.message); }
+  CG.busy=false; drawCong(); }
+function congSenado() {
+  const by={}, ufs=[]; let st=0, ts=0, vag=0;
+  for (const u of UFS27) { const raw=CG.sen[u]; if (!raw) continue; const r=parseU(raw); st+=r.st; ts+=r.ts; const n=r.vagas||2; vag+=n;
+    const valid=r.cands.filter(c=>!c.dvt||c.dvt.startsWith("Válido")), off=r.cands.filter(isOfficialEl);
+    const win=(off.length?off:valid).slice(0,n).map(c=>({...c, uf:u, pst:r.pst, official:isOfficialEl(c), fin:isFinal(r)}));
+    ufs.push({u, r, win}); for (const c of win) (by[c.partido] ||= []).push(c); }
+  const groups=Object.entries(by).map(([sg,cs])=>({k:sg, sg, n:cs.length, cs, off:cs.filter(c=>c.official).length})).sort((a,b)=>spectIdx(a.sg)-spectIdx(b.sg)||b.n-a.n);
+  return {groups, ufs, vag, pst: ts?st/ts*100:0, nUF:ufs.length}; }
+function congCamara() {
+  const by={}; let st=0, ts=0, vag=0, nUF=0, nMatch=0; const chk=[];
+  for (const u of UFS27) { const raw=CG.cam[u]; if (!raw) continue; let SA=null; try { SA=seatAlloc(raw); } catch(e) {}
+    const s=(raw.s||{}); st+=parseInt(s.st||"0",10); ts+=parseInt(s.ts||"0",10); nUF++;
+    const nv=parseInt(((raw.carg||[])[0]||{}).nv||"0",10)||VAGAS_CAM[u]; vag+=nv; if (nv!==VAGAS_CAM[u]) chk.push(`${u.toUpperCase()}: TSE ${nv} × tabela ${VAGAS_CAM[u]}`);
+    if (!SA) continue; if (SA.tseMatch) nMatch++;
+    for (const e of SA.ents) { if (!e.seats) continue; const k=e.fed ? e.sg.split("/").sort().join("/") : e.sg; const G=by[k] ||= {k, sg:e.sg, n:0, per:[], names:{}};
+      G.names[e.sg]=(G.names[e.sg]||0)+1; G.n+=e.seats; G.per.push({u, n:e.seats, pst:s.pst||"0", el:e.el.map(c=>c.nome)}); } }
+  const groups=Object.values(by).map(g=>({...g, sg:Object.entries(g.names).sort((a,b)=>b[1]-a[1])[0][0], per:g.per.sort((a,b)=>b.n-a.n||a.u.localeCompare(b.u))})).sort((a,b)=>spectIdx(a.sg)-spectIdx(b.sg)||b.n-a.n);
+  return {groups, vag, nUF, chk, nMatch, pst: ts?st/ts*100:0}; }
+function cgTable(groups, total, rowsFn, unit) {
+  const bySize=groups.slice().sort((a,b)=>b.n-a.n||a.sg.localeCompare(b.sg)), mx=Math.max(1,...groups.map(g=>g.n));
+  return `<div class="cgt">${bySize.map(g=>`<details class="cgp" data-cgk="${esc(unit+"|"+g.k)}"${CG.open.has(unit+"|"+g.k)?" open":""}><summary><span class="sw" style="background:${pColor(g.sg)}"></span><span class="cgn">${esc(g.sg)}</span><span class="cgb"><i style="width:${(g.n/mx*100).toFixed(1)}%;background:${pColor(g.sg)}"></i></span><b class="cgv">${g.n}</b><span class="cgpc">${pp(g.n/total*100,1)}</span></summary><div class="cgd">${rowsFn(g)}</div></details>`).join("")}</div>`; }
+function drawCong() {
+  const v=typeof document!=="undefined"&&document.getElementById("v-cong"); if (!v) return; v.dataset.sub=CG.mode;
+  const upd=CG.t?`atualizado às ${new Date(CG.t).toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"})} · atualiza a cada 3 min`:"";
+  let h=`<section><h2 class="grp">Congresso · visão nacional</h2><div class="depseg"><button type="button" data-cgmode="sen">Senado <span>54 vagas</span></button><button type="button" data-cgmode="cam">Câmara <span>513 vagas</span></button></div>
+    <div class="meta" style="margin-top:6px"><span id="cgprog">${CG.busy?`Carregando ${CG.done} de 54 arquivos do TSE…`:upd}</span> · <button type="button" class="linkbtn" data-cgref="1"${CG.busy?" disabled":""}>Atualizar</button></div>${CG.err.length?`<div class="errbox">Falhou: ${esc(CG.err.join(", "))}${CG.t?" (usando dados anteriores quando houver)":""}</div>`:""}`;
+  if (!CG.t) { v.innerHTML=h+SKEL+`</section>`; return; }
+  const S=congSenado(), C=congCamara();
+  const tagS=c=>c.official?'<span class="tag t-el">ELEITO</span>':'<span class="tag t-par">eleito pela parcial</span>';
+  h+=`<div class="cgpane" data-cgp="sen"><div class="card"><h3>Senado · vagas em disputa em 2026</h3>
+    <div class="meta"><b>${pp(S.pst,2)}</b> das seções apuradas (soma das ${S.nUF} UFs) · ${S.vag} vagas (2 por UF)${S.vag!==54?` · <b>atenção: ${S.vag} ≠ 54</b>`:""}</div>
+    ${apBarSimple(S.pst)}${hemi(S.groups, S.vag)}
+    ${cgTable(S.groups, S.vag, g=>g.cs.slice().sort((a,b)=>a.uf.localeCompare(b.uf)).map(c=>`<div class="cgr"><b class="ufc">${c.uf.toUpperCase()}</b><span class="nm">${nmCase(c.nome)}</span> ${tagS(c)}<span class="vt">${esc(c.pvap)}% · UF ${esc(c.pst)}% apur.</span></div>`).join(""), "sen")}
+    <details class="cgp" data-cgk="sen|ufs"${CG.open.has("sen|ufs")?" open":""}><summary><span class="cgn"><b>Todas as UFs</b> (2 mais votados ou eleitos oficiais)</span></summary><div class="cgd">${S.ufs.map(x=>`<div class="cgr"><b class="ufc">${x.u.toUpperCase()}</b><span class="vt" style="margin-left:0">${esc(x.r.pst)}% apurado</span></div>${x.win.map(c=>`<div class="cgr sub"><span class="sw" style="background:${pColor(c.partido)}"></span><span class="nm">${nmCase(c.nome)}</span> <span class="party">${esc(c.partido)}</span> ${tagS(c)}<span class="vt">${esc(c.pvap)}%</span></div>`).join("")}`).join("")}</div></details>
+    <div class="note">Mostra só as <b>54 vagas em disputa</b> em 2026 (2 por UF). A composição total do Senado (81) também inclui os 27 senadores eleitos em 2022, que não estão em disputa. Não somamos esses 27 porque o TSE não publica a filiação partidária atual deles e não há fonte oficial confiável neste momento.</div></div></div>`;
+  h+=`<div class="cgpane" data-cgp="cam"><div class="card"><h3>Câmara dos Deputados · projeção pela parcial</h3>
+    <div class="meta"><b>${pp(C.pst,2)}</b> das seções apuradas (27 UFs) · ${C.groups.reduce((a,g)=>a+g.n,0)} de ${C.vag} cadeiras distribuídas · confere com a distribuição parcial do TSE em ${C.nMatch} de ${C.nUF} UFs${C.vag!==513?` · <b>atenção: ${C.vag} ≠ 513</b>`:""}${C.chk.length?` · vagas TSE ≠ tabela: ${esc(C.chk.join("; "))}`:""}</div>
+    ${apBarSimple(C.pst)}${hemi(C.groups, C.vag)}
+    ${cgTable(C.groups, C.vag, g=>g.per.map(p=>`<div class="cgr"><b class="ufc">${p.u.toUpperCase()}</b><b>${p.n}</b><span class="nms">${p.el.map(n=>esc(nmCase(n))).join(", ")}</span><span class="vt">${esc(p.pst)}% apur.</span></div>`).join(""), "cam")}
+    <div class="note">Mesmo cálculo da aba Deputados aplicado a cada UF (quociente eleitoral, quociente partidário com 10% do QE, sobras 80/20 e rodada final entre todos; federação conta como um partido), com o nº de vagas do próprio JSON do TSE. É <b>projeção pela parcial</b>, não resultado.</div></div></div></section>`;
+  v.innerHTML=h; }
+const apBarSimple = p => `<div class="apbar"><div class="aptrack"><i class="apfill" style="width:${Math.max(0,Math.min(100,p)).toFixed(1)}%"></i></div></div>`;
+if (typeof document!=="undefined") {
+  document.addEventListener("click", e=>{ const m=e.target.closest("[data-cgmode]"); if (m) { CG.mode=m.dataset.cgmode; try { localStorage.setItem("cgmode", CG.mode); } catch(_) {} drawCong(); return; }
+    if (e.target.closest("[data-cgref]")) congLoad(true); });
+  document.addEventListener("toggle", e=>{ const d=e.target; if (d && d.dataset && d.dataset.cgk) { if (d.open) CG.open.add(d.dataset.cgk); else CG.open.delete(d.dataset.cgk); } }, true);
+  try { CG.mode=localStorage.getItem("cgmode")==="cam"?"cam":"sen"; } catch(_) {}
+  setInterval(()=>{ const v=document.getElementById("v-cong"); if (v && v.classList.contains("on") && !document.hidden && CG.t && Date.now()-CG.t>=CG_REFRESH) congLoad(); }, 20000);
 }
 const errCard = (title, msg) => `<div class="card"><h3>${esc(title)}</h3><div class="errbox">Erro ao buscar dados: ${esc(msg)}</div></div>`;
 
